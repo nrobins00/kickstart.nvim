@@ -615,7 +615,7 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
+        clangd = {},
         gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -651,6 +651,7 @@ require('lazy').setup({
       --
       --  You can press `g?` for help in this menu.
       require('mason').setup()
+      require('lspconfig').perlpls.setup {}
 
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
